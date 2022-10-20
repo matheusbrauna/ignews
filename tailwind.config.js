@@ -25,7 +25,19 @@ module.exports = {
         900: '#121414',
       },
     },
-    extend: {},
+    extend: {
+      fontFamily: {
+        sans: ['Roboto', 'sans-serif'],
+      },
+
+      container: {
+        center: true,
+        padding: {
+          DEFAULT: '1rem',
+          sm: '2rem',
+        },
+      },
+    },
   },
   plugins: [],
 }
