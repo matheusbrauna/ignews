@@ -14,7 +14,7 @@ export function NavLink({ children, href, ...props }: NavLinkProps) {
   return (
     <Link href={href} {...props}>
       <a
-        className={clsx('relative flex items-center h-full', {
+        className={clsx('relative flex items-center h-full font-bold', {
           'active-link': isActive,
           'text-gray-300': !isActive,
         })}
