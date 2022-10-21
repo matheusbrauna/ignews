@@ -1,4 +1,3 @@
-import clsx from 'clsx'
 import Link, { LinkProps } from 'next/link'
 import { useRouter } from 'next/router'
 
@@ -14,10 +13,9 @@ export function NavLink({ children, href = '/', ...props }: NavLinkProps) {
   return (
     <Link href={href} {...props}>
       <a
-        className={clsx('relative flex items-center h-full font-bold', {
-          'active-link': isActive,
-          'text-gray-300': !isActive,
-        })}
+        className={`relative flex items-center h-full font-bold text-gray-300 ${
+          isActive && 'active-link text-gray-100'
+        }`}
       >
         {children}
       </a>
