@@ -6,7 +6,7 @@ type NavLinkProps = LinkProps & {
   children: string
 }
 
-export function NavLink({ children, href, ...props }: NavLinkProps) {
+export function NavLink({ children, href = '/', ...props }: NavLinkProps) {
   const { asPath } = useRouter()
 
   const isActive = asPath === href
