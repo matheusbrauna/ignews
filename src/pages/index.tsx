@@ -2,6 +2,7 @@
 import { GetStaticProps } from 'next'
 import { signIn, useSession } from 'next-auth/react'
 import Image from 'next/future/image'
+import Head from 'next/head'
 import { Button } from '../components/Button'
 import { api } from '../services/api'
 import { stripe } from '../services/stripe'
@@ -40,36 +41,42 @@ export default function Home({ product }: HomeProps) {
   }
 
   return (
-    <main>
-      <div className="container flex flex-col items-center justify-between gap-10 pt-20 lg:pt-0 lg:gap-0 lg:main-height lg:flex-row">
-        <div className="max-w-4xl">
-          <span className="text-2xl font-bold">👏 Hey, welcome</span>
+    <>
+      <Head>
+        <title>Home | Ignews</title>
+      </Head>
 
-          <h1 className="mt-10 mb-6 font-black text-7xl">
-            News about the <span className="text-blue-500">React</span> world
-          </h1>
+      <main>
+        <div className="container flex flex-col items-center justify-between gap-10 pt-20 lg:pt-0 lg:gap-0 lg:main-height lg:flex-row">
+          <div className="max-w-4xl">
+            <span className="text-2xl font-bold">👏 Hey, welcome</span>
 
-          <p className="text-2xl">Get access to all the publications</p>
-          <p className="mb-10 text-2xl font-bold text-blue-500">
-            for {product.amount} month
-          </p>
+            <h1 className="mt-10 mb-6 font-black text-7xl">
+              News about the <span className="text-blue-500">React</span> world
+            </h1>
 
-          <Button type="button" onClick={handleSubscribe}>
-            Subscribe now
-          </Button>
+            <p className="text-2xl">Get access to all the publications</p>
+            <p className="mb-10 text-2xl font-bold text-blue-500">
+              for {product.amount} month
+            </p>
+
+            <Button type="button" onClick={handleSubscribe}>
+              Subscribe now
+            </Button>
+          </div>
+
+          <div className="relative w-[20.875rem] h-[32.5rem]">
+            <Image
+              src="/mulher.png"
+              fill
+              alt="Mulher"
+              sizes="width: 20.875rem"
+              priority
+            />
+          </div>
         </div>
-
-        <div className="relative w-[20.875rem] h-[32.5rem]">
-          <Image
-            src="/mulher.png"
-            fill
-            alt="Mulher"
-            sizes="width: 20.875rem"
-            priority
-          />
-        </div>
-      </div>
-    </main>
+      </main>
+    </>
   )
 }
 

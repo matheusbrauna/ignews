@@ -14,7 +14,7 @@ export function SignInButton({ contextualClasses = '' }: SignInButtonProps) {
   return session ? (
     <button
       onClick={() => signOut()}
-      className={`flex font-bold items-center justify-center gap-4 h-12 px-4 bg-gray-700 rounded-full ${contextualClasses}`}
+      className={`flex font-bold items-center justify-center gap-4 h-12 px-4 bg-gray-800 rounded-full ${contextualClasses}`}
     >
       <BsGithub className="text-2xl text-green-500 " />
       {session.user?.name}
