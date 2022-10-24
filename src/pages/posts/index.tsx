@@ -4,6 +4,7 @@ import Head from 'next/head'
 import Prismic from '@prismicio/client'
 import { RichText } from 'prismic-dom'
 import { getPrismicClient } from '../../services/prismic'
+import Link from 'next/link'
 
 type Post = {
   slug: string
@@ -27,20 +28,19 @@ export default function Posts({ posts }: PostsProps) {
         <div className="container">
           <div className="max-w-[720px] mt-20 mx-auto">
             {posts.map((post) => (
-              <a
-                key={post.slug}
-                className="transition-colors test hover:text-yellow-500"
-              >
-                <time className="flex items-center text-base text-gray-300">
-                  {post.updatedAt}
-                </time>
-                <strong className="block mt-4 text-2xl leading-8">
-                  {post.title}
-                </strong>
-                <p className="mt-2 leading-relaxed text-gray-300">
-                  {post.excerpt}
-                </p>
-              </a>
+              <Link href={`/posts/${post.slug}`} key={post.slug}>
+                <a className="transition-colors test hover:text-yellow-500">
+                  <time className="flex items-center text-base text-gray-300">
+                    {post.updatedAt}
+                  </time>
+                  <strong className="block mt-4 text-2xl leading-8">
+                    {post.title}
+                  </strong>
+                  <p className="mt-2 leading-relaxed text-gray-300">
+                    {post.excerpt}
+                  </p>
+                </a>
+              </Link>
             ))}
           </div>
         </div>

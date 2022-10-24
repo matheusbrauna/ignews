@@ -20,6 +20,12 @@
   .main-height {
     height: calc(100vh - 5rem);
   }
+
+  .gradient {
+    background: linear-gradient(rgb(225 225 230), transparent);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
 }
 
 @layer utilities {

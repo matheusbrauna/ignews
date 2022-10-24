@@ -3,6 +3,7 @@ import { GetStaticProps } from 'next'
 import { signIn, useSession } from 'next-auth/react'
 import Image from 'next/future/image'
 import Head from 'next/head'
+import { useRouter } from 'next/router'
 import { Button } from '../components/Button'
 import { api } from '../services/api'
 import { stripe } from '../services/stripe'
@@ -18,11 +19,19 @@ interface HomeProps {
 }
 
 export default function Home({ product }: HomeProps) {
-  const { data: session } = useSession()
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const { data: session } = useSession() as any
+  const { push } = useRouter()
 
   async function handleSubscribe() {
     if (!session) {
       signIn('github')
+
+      return
+    }
+
+    if (session?.activeSubscription) {
+      push('/posts')
 
       return
     }
