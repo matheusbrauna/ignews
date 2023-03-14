@@ -14,8 +14,9 @@ export function Header() {
             <NavLink href="/">Home</NavLink>
             <NavLink href="/posts">Posts</NavLink>
           </div>
-          <button className="flex items-center justify-center w-6 h-6 gap-4 ml-auto font-bold rounded-full">
-            <BsGithub className="w-full h-full text-2xl text-yellow-500" />
+          <button className="flex items-center justify-center gap-4 p-2 ml-auto font-bold bg-gray-600 rounded-full sm:h-12 sm:w-max sm:px-4">
+            <BsGithub className="w-6 h-6 text-2xl text-yellow-500" />
+            <span className="hidden text-base sm:block">Matheus Braúna</span>
           </button>
         </nav>
       </div>

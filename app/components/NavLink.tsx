@@ -17,8 +17,6 @@ export function NavLink({ children, href, ...rest }: NavLinkProps) {
     pathname === rest.as ||
     pathname?.startsWith(String(rest.as))
 
-  console.log(pathname)
-
   return (
     <Link
       {...rest}
