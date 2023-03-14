@@ -1,5 +1,7 @@
-import Link from 'next/link'
-
 export default function Posts() {
-  return <Link href="/">Posts</Link>
+  return (
+    <main className="grid main-height place-items-center">
+      <div className="container"></div>
+    </main>
+  )
 }

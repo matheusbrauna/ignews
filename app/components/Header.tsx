@@ -4,10 +4,10 @@ import { NavLink } from './NavLink'
 
 export function Header() {
   return (
-    <header>
+    <header className="border-b border-b-gray-600">
       <div className="container flex items-center w-full h-20 gap-20">
         <Link href="/" className="text-2xl font-bold">
-          Ig.news
+          Ig<span className="text-blue-500">.</span>news
         </Link>
         <nav className="flex items-center w-full">
           <div className="grid grid-flow-col gap-8">

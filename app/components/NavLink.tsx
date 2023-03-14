@@ -24,8 +24,8 @@ export function NavLink({ children, href, ...rest }: NavLinkProps) {
       {...rest}
       href={href}
       className={clsx('relative text-base leading-[5rem]', {
-        'text-gray-100 active-link': isActive,
-        'text-gray-300': !isActive,
+        'text-gray-50 active-link': isActive,
+        'text-gray-200': !isActive,
       })}
     >
       {children}
