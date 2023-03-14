@@ -4,7 +4,7 @@ import { NavLink } from './NavLink'
 
 export function Header() {
   return (
-    <header className="border-b border-b-gray-600">
+    <header className="fixed top-0 left-0 w-full bg-gray-800 border-b border-b-gray-600">
       <div className="container flex items-center w-full h-20 gap-20">
         <Link href="/" className="text-2xl font-bold">
           Ig<span className="text-blue-500">.</span>news
