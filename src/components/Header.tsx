@@ -1,6 +1,6 @@
 import Link from 'next/link'
-import { BsGithub } from 'react-icons/bs'
 import { NavLink } from './NavLink'
+import { SignInButton } from './SignInButton'
 
 export function Header() {
   return (
@@ -9,15 +9,12 @@ export function Header() {
         <Link href="/" className="text-2xl font-bold">
           Ig<span className="text-blue-500">.</span>news
         </Link>
-        <nav className="flex items-center w-full">
+        <nav className="flex items-center w-full h-full">
           <div className="grid grid-flow-col gap-8">
             <NavLink href="/">Home</NavLink>
             <NavLink href="/posts">Posts</NavLink>
           </div>
-          <button className="flex items-center justify-center gap-4 p-2 ml-auto font-bold bg-gray-600 rounded-full sm:h-12 sm:w-max sm:px-4">
-            <BsGithub className="w-6 h-6 text-2xl text-yellow-500" />
-            <span className="hidden text-base sm:block">Matheus Braúna</span>
-          </button>
+          <SignInButton />
         </nav>
       </div>
     </header>
