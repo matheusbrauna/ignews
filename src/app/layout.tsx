@@ -1,3 +1,4 @@
+import '../sass/app.scss'
 import { ReactNode } from 'react'
 
 export const metadata = {

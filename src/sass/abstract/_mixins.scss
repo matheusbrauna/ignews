@@ -1,0 +1,17 @@
+@mixin from-tablet {
+  @media (min-width: map-get($breakpoints, tablet)) {
+    @content;
+  }
+}
+
+@mixin from-laptop {
+  @media (min-width: map-get($breakpoints, laptop)) {
+    @content;
+  }
+}
+
+@mixin from-desktop {
+  @media (min-width: map-get($breakpoints, desktop)) {
+    @content;
+  }
+}
