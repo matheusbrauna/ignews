@@ -1,5 +1,12 @@
-import '../sass/app.scss'
+import '../styles/globals.scss'
+import { Roboto } from 'next/font/google'
 import { ReactNode } from 'react'
+
+const roboto = Roboto({
+  subsets: ['latin'],
+  display: 'swap',
+  weight: ['400', '700', '900'],
+})
 
 export const metadata = {
   title: 'Create Next App',
@@ -8,7 +15,7 @@ export const metadata = {
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="pt-BR">
+    <html lang="pt-BR" className={roboto.className}>
       <body>{children}</body>
     </html>
   )
