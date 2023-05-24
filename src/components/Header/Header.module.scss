@@ -1,0 +1,72 @@
+@import "../../styles/mixins.scss";
+@import "../../styles/variables.scss";
+
+.header {
+  /* Estilos para o bloco header */
+  border-bottom: 1px solid $border;
+
+  .container {
+    /* Estilos para o elemento container */
+    @include container;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .nav {
+    /* Estilos para o elemento nav */
+    display: flex;
+    align-items: center;
+
+    .logo {
+      font-size: 32px;
+      font-weight: bold;
+      color: $title;
+
+      /* Estilos para o elemento logo */
+
+      &-dot {
+        /* Estilos para o elemento logo-dot */
+      }
+    }
+
+    &-links {
+      /* Estilos para o elemento nav-links */
+      margin-left: 5rem;
+    }
+
+    &-link {
+      display: inline-block;
+      min-height: 5rem;
+      line-height: 5rem;
+      color: $title;
+      font-weight: 700;
+      text-decoration: none;
+
+      & + a {
+        margin-left: 2rem;
+      }
+    }
+  }
+
+  .button {
+    /* Estilos para o botão */
+    height: 3rem;
+    padding-inline: 1rem;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background-color: $shape;
+    color: $title;
+    font-weight: bold;
+
+    &-icon {
+      /* Estilos para o ícone do botão */
+      width: 24px;
+      height: 24px;
+      color: $yellow;
+      border-radius: 100px;
+    }
+  }
+}

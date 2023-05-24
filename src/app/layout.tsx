@@ -1,3 +1,4 @@
+import { Header } from '@/components/Header'
 import '../styles/globals.scss'
 import { Roboto } from 'next/font/google'
 import { ReactNode } from 'react'
@@ -16,7 +17,10 @@ export const metadata = {
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="pt-BR" className={roboto.className}>
-      <body>{children}</body>
+      <body>
+        <Header />
+        {children}
+      </body>
     </html>
   )
 }
