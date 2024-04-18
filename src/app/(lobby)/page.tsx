@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 
 import { Shell } from '@/components/shell'
 import { Button } from '@/components/ui/button'
@@ -17,8 +18,11 @@ export default function Home() {
             Get access to all the publications <br />
             <span className="font-bold text-cyan-400">for $9,90 month</span>
           </p>
-          <Button className="mt-10 h-16 w-64 rounded-full text-xl font-bold">
-            Subscribe now
+          <Button
+            asChild
+            className="mt-10 h-16 w-64 rounded-full text-xl font-bold"
+          >
+            <Link href="#">Subscribe now</Link>
           </Button>
         </div>
         <Image
