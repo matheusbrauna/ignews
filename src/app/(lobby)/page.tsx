@@ -7,7 +7,7 @@ import { Button } from '@/components/ui/button'
 export default function Home() {
   return (
     <Shell>
-      <div className="grid grid-cols-2 gap-40 pt-28">
+      <div className="grid grid-cols-1 gap-40 pt-28 lg:grid-cols-2">
         <div>
           <span className="text-2xl font-bold">👏 Hey, welcome</span>
           <h1 className="mb-6 mt-10 text-7xl font-black">
@@ -30,7 +30,7 @@ export default function Home() {
           alt="Desenho de uma mulher usando um notebook"
           width={334}
           height={520}
-          className="object-cover"
+          className="hidden object-cover lg:block"
           priority
         />
       </div>
